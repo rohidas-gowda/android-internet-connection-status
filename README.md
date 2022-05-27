@@ -1,4 +1,4 @@
-AndroidManifest.xml
+AndroidManifest.xml :
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,7 +33,7 @@ AndroidManifest.xml
 
 ```
 
-/res/drawable/try_again_button.xml
+/res/drawable/try_again_button.xml :
 
 ```xml
 
@@ -49,7 +49,7 @@ AndroidManifest.xml
 
 ```
 
-/res/layout/activity_main.xml
+/res/layout/activity_main.xml :
 
 ```xml
 
@@ -71,5 +71,64 @@ AndroidManifest.xml
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+```
+
+/res/layout/connection_status.xml :
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/purple_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_signal_wifi_off_24"
+        android:layout_gravity="center"
+        app:tint="@color/purple_700"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OOPS!"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_700"
+        android:textSize="25sp"
+        android:text="No Internet Connection"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:text="Please Check Your Connection"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:textAllCaps="true"
+        android:text="Try Again"
+        android:textColor="@color/white"
+        android:background="@drawable/try_again_button"/>
+
+</LinearLayout>
 
 ```
